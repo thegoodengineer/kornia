@@ -251,7 +251,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   kernel has no CPU `float16`/`bfloat16` implementation, so both descriptors raised
   `NotImplementedError: "avg_pool3d_out_frame" not implemented for 'Half'`. The normalisation runs over the
   channel axis only, so it is now given the equivalent 3-D view and goes through `avg_pool2d`, which does have
-  those kernels. Output is bitwise unchanged on CPU in `float32` and `float64`. (#PR)
+  those kernels. Output is bitwise unchanged on CPU in `float32` and `float64`. (#4225)
 
 * Constructing `ScaleSpaceDetector` with `compile_modules` no longer permanently mutates the process-global
   `torch._dynamo.config.capture_dynamic_output_shape_ops` setting. (#4134)
